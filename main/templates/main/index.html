@@ -1,0 +1,7 @@
+olá, {{ request.user }}
+
+<br><br>
+
+{% if social_user %}
+    Url: {{ social_user.extra_data.profile_url }}
+{% endif %}

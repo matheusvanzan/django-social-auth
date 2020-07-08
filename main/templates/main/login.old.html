@@ -1,0 +1,25 @@
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    
+    {% for field in form %}
+    
+        {{ field.label }}: {{ field }}
+        <br>
+    
+    {% endfor %}
+    
+    <input type="submit" vlaue="Go" />
+    
+    <br><br>
+    
+    <button>
+        <a href="#">Login with Instagram</a>
+    </button>
+    <button>
+        <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+    </button>
+    <button>
+        <a href="#">Login with LinkedIn</a>
+    </button>
+    
+</form>
