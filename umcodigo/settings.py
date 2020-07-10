@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.facebook.FacebookOAuth2',
     'social_core.backends.instagram.InstagramOAuth2',
-    # google
+    'social_core.backends.google.GoogleOAuth2',
     # github
     'django.contrib.auth.backends.ModelBackend',
 ]
@@ -58,8 +58,7 @@ LOGIN_REDIRECT_URL = 'index'
 LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
 
-
-# facebook extra data
+# Facebook
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link'] # add this
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {       # add this
   'fields': 'id, name, email, picture.type(large), link'
@@ -70,6 +69,10 @@ SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [ # add this
     ('picture', 'picture'),
     ('link', 'profile_url'),
 ]
+
+# Google
+# SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
 
 
 MIDDLEWARE = [

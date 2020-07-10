@@ -42,23 +42,24 @@
 		</section>
 		
 		<section class="login_content login_social">
-		  <button type="button" class="btn btn-default">
-		  	  <i class="fa fa-instagram"></i>
-			  <a href="#">Login com Instagram</a>
-		  </button>
-		  <br>
-		  <button type="button" class="btn btn-primary">
+		  <button type="button" class="btn btn-default" style="width: 200px;">
 			  <i class="fa fa-facebook"></i>
-			  <a class="white" href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+			  <a href="{% url 'social:begin' 'facebook' %}">Login com Facebook</a>
 		  </button>
 		  <br>
-		  <button type="button" class="btn btn-danger">
-			  <i class="fa fa-"></i>
-			  <a href="#">Login with LinkedIn</a>
-		  </button
-		  <button type="button" class="btn btn-danger">
-			  <i class="fa fa-"></i>
-			  <a href="#">Login with LinkedIn</a>
+		  <button type="button" class="btn btn-default" style="width: 200px;">
+			  <i class="fa fa-google"></i>
+			  <a href="{% url 'social:begin' 'google-oauth2' %}">Login com Google</a>
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-default" style="width: 200px;">
+			  <i class="fa fa-linkedin"></i>
+			  <a href="#">Login com LinkedIn</a>
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-default" style="width: 200px;">
+			  <i class="fa fa-github"></i>
+			  <a href="#">Login com Github</a>
 		  </button>
 		</section>
 	  </div>
