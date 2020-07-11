@@ -22,7 +22,7 @@ jobs:
     - name: SSH Access
       env:
         SSHPASS: ${{ secrets.SERVER_PASS }}
-      run:
+      run: >-
         sshpass 
         -e ssh 
         -o StrictHostKeyChecking=no
