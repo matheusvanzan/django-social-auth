@@ -13,15 +13,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Pre processing
-      run: |
-        sudo apt-get update
-        sudo apt-get install nmap
-        nmap -Pn ${{ secrets.SERVER_HOST }}
-
     - name: SSH Access
       env:
         SSHPASS: ${{ secrets.SERVER_PASS }}
       run: >-
         sshpass -e ssh -o StrictHostKeyChecking=no
-        ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "ls"
+        ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "
+        cd /home/vanzan/production/django-umcodigo 
+        && git pull https://vanzan:${{ secrets.GITHUB_TOKEN }}@github.com/umcodigo/django-social-auth.git
+        && exit"
+        
