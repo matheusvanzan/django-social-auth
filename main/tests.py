@@ -31,6 +31,4 @@ class UserLoginTest(TestCase):
         
         self.assertEquals(response.status_code, 200)
         self.assertEquals(list(response.context)[0], {'user': user})
-
-    # def test_that_fails(self):
-    #     self.assertTrue(False)
+        
