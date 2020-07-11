@@ -1,9 +1,7 @@
-from django.forms import ModelForm, Form
-from django.contrib.auth.models import User as DjangoUser
+from django import forms
 
 
-class DjangoUserForm(ModelForm):
+class UserForm(forms.Form):
     
-    class Meta:
-        model = DjangoUser
-        fields = ['username', 'password']
+    username = forms.CharField(label = 'Usuário')
+    password = forms.CharField(label = 'Senha', widget = forms.PasswordInput)

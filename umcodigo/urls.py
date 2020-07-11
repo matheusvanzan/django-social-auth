@@ -20,5 +20,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('social-auth/', include('social_django.urls', namespace='social-auth')),
-    # path('gentella/', include('app.urls')),
 ]

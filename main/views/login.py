@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 
-from main.forms import DjangoUserForm
+from main.forms import UserForm
 
 
 class LoginView(View):
@@ -16,20 +16,19 @@ class LoginView(View):
             return HttpResponseRedirect(reverse('index'))
         
         data = {
-            'form': DjangoUserForm()
+            'form': UserForm()
         }
         
         return render(request, 'main/login.html', data)
         
     def post(self, request):
         
-        print(request.POST)
+        form = UserForm(data=request.POST)
         
-        form = Form(request.POST)
 
         if form.is_valid():
-            username = request.POST.get('username')
-            password = request.POST.get('password')
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
 
             if username and password:
                 user = authenticate(username=username, password=password)

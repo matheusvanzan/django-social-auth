@@ -27,7 +27,7 @@ SECRET_KEY = '5c#5*9q^fp9-^v45&5wup)(hhgx*7ays$4obq76h0u6r^_*s^f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django.umcodigo.com', '64.225.34.94']
+ALLOWED_HOSTS = ['*'] if DEBUG else ['django.umcodigo.com']
 
 
 # Application definition
