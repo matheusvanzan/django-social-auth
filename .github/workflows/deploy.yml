@@ -20,6 +20,6 @@ jobs:
         sshpass -e ssh -o StrictHostKeyChecking=no
         ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "
         cd /home/vanzan/production/django-umcodigo 
-        && git pull https://vanzan:${{ secrets.GITHUB_TOKEN }}@github.com/umcodigo/django-social-auth.git
+        && git pull https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
         && exit"
         
