@@ -1,17 +1,21 @@
 from django.test import TestCase
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
 
-# Create your tests here.
-class YourTestClass(TestCase):
+
+class UserLoginTest(TestCase):
+    
     def setUp(self):
-        # Setup run before every test method.
-        pass
+        User.objects.create_user('user', 'user@umcodigo.com', 'password')
 
     def tearDown(self):
-        # Clean up run after every test method.
-        pass
+        user = User.objects.get(username='user')
+        user.delete()
 
-    def test_something_that_will_pass(self):
-        self.assertFalse(False)
+    def test_login(self):
+        user_a = User.objects.get(username='user')
+        user_b = authenticate(username='user', password='password')
+        self.assertEquals(user_a, user_b)
 
-    def test_something_that_will_fail(self):
-        self.assertTrue(False)
+    # def test_logout(self):
+    #     self.assertTrue(False)
