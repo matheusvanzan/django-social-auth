@@ -17,5 +17,5 @@ class UserLoginTest(TestCase):
         user_b = authenticate(username='user', password='password')
         self.assertEquals(user_a, user_b)
 
-    def test_that_fails(self):
-        self.assertTrue(False)
+#     def test_that_fails(self):
+#         self.assertTrue(False)
