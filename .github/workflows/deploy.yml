@@ -24,4 +24,4 @@ jobs:
         SSHPASS: ${{ secrets.SERVER_PASS }}
       run: >-
         sshpass -e ssh -o StrictHostKeyChecking=no
-        ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}: "ls"
+        ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "ls"
