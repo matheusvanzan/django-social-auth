@@ -19,7 +19,6 @@ You must define the following envinroment variables:
 - Facebook
   - SOCIAL_AUTH_FACEBOOK_KEY
   - SOCIAL_AUTH_FACEBOOK_SECRET
-
 - Google
   - SOCIAL_AUTH_GOOGLE_OAUTH2_KEY
   - SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET

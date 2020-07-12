@@ -19,7 +19,6 @@ Você deve definir as seguintes variáveis de ambiente:
 - Facebook
   - SOCIAL_AUTH_FACEBOOK_KEY
   - SOCIAL_AUTH_FACEBOOK_SECRET
-
 - Google
   - SOCIAL_AUTH_GOOGLE_OAUTH2_KEY
   - SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET
