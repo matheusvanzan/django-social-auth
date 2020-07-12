@@ -14,4 +14,15 @@ Social media authentication with Django for the following posts:
 - WIP [Autenticação com Google no Django](http://umcodigo.com/autenticacao-com-google-no-django/?from=github)
 
 
+You must define the following envinroment variables:
+
+- Facebook
+ - SOCIAL_AUTH_FACEBOOK_KEY
+ - SOCIAL_AUTH_FACEBOOK_SECRET
+
+- Google
+ - SOCIAL_AUTH_GOOGLE_OAUTH2_KEY
+ - SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET
+
+
 ![login screen](/img/screen.png)
