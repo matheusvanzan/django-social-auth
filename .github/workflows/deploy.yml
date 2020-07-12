@@ -20,6 +20,8 @@ jobs:
         ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "
         cd /home/vanzan/production/django-umcodigo 
         && git pull https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+        && source ../env/django-umcodigo/bin/activate
+        && python manage.py migrate
         && echo ${{ secrets.SERVER_PASS }} | sudo -S systemctl restart django-umcodigo
         && echo ${{ secrets.SERVER_PASS }} | sudo -S systemctl restart nginx
         && exit"
