@@ -17,11 +17,11 @@ Autenticação com redes sociais no Django para os artigos:
 Você deve definir as seguintes variáveis de ambiente:
 
 - Facebook
- - SOCIAL_AUTH_FACEBOOK_KEY
- - SOCIAL_AUTH_FACEBOOK_SECRET
+  - SOCIAL_AUTH_FACEBOOK_KEY
+  - SOCIAL_AUTH_FACEBOOK_SECRET
 
 - Google
- - SOCIAL_AUTH_GOOGLE_OAUTH2_KEY
- - SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET
+  - SOCIAL_AUTH_GOOGLE_OAUTH2_KEY
+  - SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET
 
 ![login screen](/img/screen.png)
