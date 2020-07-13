@@ -16,5 +16,5 @@ jobs:
     - name: Run coverage
       uses: matheusvanzan/django-coverage-action@master
       with:
-      - django-app: 'main'
-      - minimum-coverage: '50'
+        - django-app: 'main'
+        - minimum-coverage: '50'
