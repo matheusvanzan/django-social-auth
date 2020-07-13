@@ -21,14 +21,14 @@ class UserLoginTest(TestCase):
         user_b = authenticate(username='user', password='password')
         self.assertEquals(user_a, user_b)
         
-    # def test_index_view(self):
-    #     user = User.objects.get(username='user')
-    #     client = Client()
-    #     client.login(username='user', password='password')
-    #     response = client.get(reverse('index'))
+    def test_index_view(self):
+        user = User.objects.get(username='user')
+        client = Client()
+        client.login(username='user', password='password')
+        response = client.get(reverse('index'))
         
-    #     print(list(response.context)[0])
+        print(list(response.context)[0])
         
-    #     self.assertEquals(response.status_code, 200)
-    #     self.assertEquals(list(response.context)[0], {'user': user})
+        self.assertEquals(response.status_code, 200)
+        self.assertEquals(list(response.context)[0], {'user': user})
         
