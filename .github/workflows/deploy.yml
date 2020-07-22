@@ -21,6 +21,7 @@ jobs:
         cd /home/vanzan/production/django-umcodigo 
         && git pull https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
         && source ../env/django-umcodigo/bin/activate
+        && pip install -r requirements.txt
         && python manage.py migrate
         && echo ${{ secrets.SERVER_PASS }} | sudo -S systemctl restart django-umcodigo
         && echo ${{ secrets.SERVER_PASS }} | sudo -S systemctl restart nginx
